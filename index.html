@@ -1,0 +1,35 @@
+<html>  
+<head>  
+<title>Currency convertor App</title> 
+<style>  
+*{text-align:center;font-size:50px;} 
+body{background-color:azure;}
+</style>
+</head> 
+<body>  
+<h1>Currency Covertor</h1> 
+<form>     
+<label>$</label> 
+<input type="number" step="any" id="dollars" placeholder="Enter amount in $" /> 
+</br></br> 
+<label>₹</label> 
+<input type="number" step="any" id="rupees" placeholder="Enter amount in ₹" /> 
+
+</form> 
+<script>  
+let dollar=document.getElementById("dollars");
+let rupees=document.getElementById("rupees"); 
+dollars.addEventListener("input",function(){   
+let d=parseFloat(dollars.value); 
+let r=d*86.5;    
+rupees.value=r.toFixed(2); 
+})
+rupees.addEventListener("input",function(){   
+let r=parseFloat(rupees.value); 
+let d=r/86.5;    
+dollars.value=d.toFixed(2); 
+})
+
+</script>
+</body>
+</html> 
